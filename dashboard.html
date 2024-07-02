@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EV Charging App - Dashboard</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="top-bar">
+                <button id="menuToggle"><i class="fas fa-bars"></i></button>
+            </div>
+            <div class="user-info">
+                <h1 id="userName">Welcome, User</h1>
+                <div class="header-icons">
+                    <button id="settingsBtn"><i class="fas fa-cog"></i></button>
+                    <button id="logoutBtn"><i class="fas fa-sign-out-alt"></i></button>
+                </div>
+            </div>
+        </header>
+        <nav id="sideMenu">
+            <ul>
+                <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="chargers.html"><i class="fas fa-charging-station"></i> Chargers</a></li>
+                <li><a href="spoofer.html"><i class="fas fa-map-marked-alt"></i> Spoofer</a></li>
+                <li><a href="#"><i class="fas fa-credit-card"></i> Payment</a></li>
+            </ul>
+        </nav>
+        <main>
+            <section id="news">
+                <h2>Latest News</h2>
+                <div class="news-item">
+                    <h3>New Charging Stations Added</h3>
+                    <p>We've added 50 new charging stations across the country!</p>
+                </div>
+            </section>
+            <section id="chargingHistory">
+                <h2>Charging History</h2>
+                <ul>
+                    <li>
+                        <span class="date">2023-06-30</span>
+                        <span class="location">Central Station</span>
+                        <span class="duration">45 min</span>
+                    </li>
+                    <li>
+                        <span class="date">2023-06-25</span>
+                        <span class="location">Mall Parking</span>
+                        <span class="duration">30 min</span>
+                    </li>
+                </ul>
+            </section>
+        </main>
+    </div>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

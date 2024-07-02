@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EV Charging App - Login</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login-card">
+            <h1>Here To Get Welcome!</h1>
+            <form id="loginForm">
+                <div class="input-group">
+                    <input type="email" id="email" placeholder="Phone Number or Email" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" placeholder="Password" required>
+                </div>
+                <button type="submit">Sign In</button>
+            </form>
+            <p class="signup-text">or Sign in with</p>
+            <div class="social-login">
+                <a href="#" class="google"><i class="fab fa-google"></i></a>
+                <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+            </div>
+            <p class="register-text">Don't have an account? <a href="#" id="registerLink">Register</a></p>
+        </div>
+    </div>
+
+    <div class="modal" id="registerModal">
+        <div class="modal-content">
+            <h2>Create an Account</h2>
+            <form id="registerForm">
+                <input type="text" id="fullName" placeholder="Full Name" required>
+                <input type="email" id="registerEmail" placeholder="Email" required>
+                <input type="password" id="registerPassword" placeholder="Password" required>
+                <input type="password" id="confirmPassword" placeholder="Re-enter Password" required>
+                <input type="date" id="dateOfBirth" required>
+                <input type="text" id="city" placeholder="City" required>
+                <input type="text" id="zipCode" placeholder="ZIP Code" required>
+                <input type="text" id="country" placeholder="Country" required>
+                <select id="carModel" required>
+                    <option value="">Select Car Model</option>
+                    <option value="tesla_model3">Tesla Model 3</option>
+                    <option value="nissan_leaf">Nissan Leaf</option>
+                    <option value="chevy_bolt">Chevrolet Bolt</option>
+                </select>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="agreement" required>
+                    <label for="agreement">I agree to the terms and conditions</label>
+                </div>
+                <button type="submit">Register</button>
+            </form>
+            <button id="closeModal">Close</button>
+        </div>
+    </div>
+    <div id="welcomePopup" class="welcome-popup">
+        <div class="welcome-content">
+            <h2>Welcome <span id="welcomeName"></span>!</h2>
+            <p>We're happy you're here.</p>
+            <div class="fireworks"></div>
+            <button id="continueButton">Continue</button>
+        </div>
+    </div>
+
+    <script src="js/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EV Charging App - Chargers</title>
+    <link rel="stylesheet" href="css/chargers.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="top-bar">
+                <button id="menuToggle"><i class="fas fa-bars"></i></button>
+                <h1>Chargers</h1>
+            </div>
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Search for companies or stations...">
+                <button id="search-button"><i class="fas fa-search"></i></button>
+            </div>
+        </header>
+        <nav id="sideMenu">
+            <ul>
+                <li><a href="dashboard.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="chargers.html"><i class="fas fa-charging-station"></i> Chargers</a></li>
+                <li><a href="spoofer.html"><i class="fas fa-map-marked-alt"></i> Spoofer</a></li>
+                <li><a href="#"><i class="fas fa-credit-card"></i> Payment</a></li>
+            </ul>
+        </nav>
+        <main>
+            <div class="filter-section">
+                <h2>Filters</h2>
+                <div class="filter-item">
+                    <label for="power-range">Charging Power: <span id="power-value">0</span> kW</label>
+                    <input type="range" id="power-range" min="0" max="240" value="0">
+                </div>
+                <div class="filter-item">
+                    <h3>Availability</h3>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="availability" value="vacant"> Vacant</label>
+                        <label><input type="checkbox" name="availability" value="catch"> Catch</label>
+                        <label><input type="checkbox" name="availability" value="faulty"> Faulty</label>
+                        <label><input type="checkbox" name="availability" value="soon"> Soon</label>
+                    </div>
+                </div>
+                <div class="filter-item">
+                    <h3>Connection Types</h3>
+                    <div class="connection-types">
+                        <button class="connection-type">Type 2</button>
+                        <button class="connection-type">CCS2</button>
+                        <button class="connection-type">CHAdeMO</button>
+                        <button class="connection-type">Tesla</button>
+                        <button class="connection-type">Type 3</button>
+                        <button class="connection-type">GB/T</button>
+                    </div>
+                </div>
+                <div class="filter-item">
+                    <h3>Operators</h3>
+                    <select id="operator-select">
+                        <option value="">Select an operator</option>
+                        <option value="ev-edge">EV Edge</option>
+                        <option value="electra">Electra</option>
+                        <option value="better-place">Better Place</option>
+                        <option value="afcon">Afcon</option>
+                        <option value="gnrgy">Gnrgy</option>
+                        <option value="sonol">Sonol</option>
+                        <option value="dor-alon">Dor Alon</option>
+                        <option value="evsmart">EV Smart</option>
+                        <option value="char-ger">Char.ger</option>
+                    </select>
+                </div>
+                <div class="filter-item">
+                    <label for="price-range">Price Range: ₪<span id="price-value">0</span></label>
+                    <input type="range" id="price-range" min="0" max="100" value="0">
+                </div>
+                <div class="filter-actions">
+                    <button id="show-results">Show Results</button>
+                    <button id="reset-filters">Reset</button>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="js/chargers.js"></script>
+</body>
+</html>
