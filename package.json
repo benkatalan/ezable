@@ -1,0 +1,13 @@
+{
+    "name": "ev-charging-app",
+    "version": "1.0.0",
+    "description": "A centralized app for electric vehicle charging stations",
+    "main": "main.js",
+    "scripts": {
+        "start": "electron ."
+    },
+    "dependencies": {
+        "electron": "^13.0.0",
+        "expo": "^51.0.17"
+    }
+}
