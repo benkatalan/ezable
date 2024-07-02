@@ -1,0 +1,279 @@
+/* css/login.css */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 320px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.container.fade-in {
+    opacity: 1;
+}
+
+.back-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    color: #333;
+    text-decoration: none;
+    z-index: 1000;
+}
+
+h1, h2 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"],
+input[type="date"],
+select {
+    width: 80%;
+    padding: 8% 0;
+    border: none;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 14px;
+    color: #333;
+    font-weight: 300;
+    background-color: transparent;
+    transition: border-bottom-color 0.3s;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-bottom-color: #7c5cfc;
+}
+
+input::placeholder {
+    color: #999;
+}
+
+button {
+    width: 80%;
+    padding: 15px;
+    background-color: #7c5cfc;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 20px auto;
+    display: block;
+    font-weight: 500;
+}
+
+button:hover {
+    background-color: #6a4ae8;
+}
+
+.signup-text, .register-text {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+}
+
+.social-login {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social-login a {
+    margin: 0 10px;
+    font-size: 20px;
+    color: #333;
+    text-decoration: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    transition: background-color 0.3s;
+}
+
+.social-login a:hover {
+    background-color: #e0e0e0;
+}
+
+.social-login .google:hover {
+    color: #DB4437;
+}
+
+.social-login .facebook:hover {
+    color: #4267B2;
+}
+
+.social-login .twitter:hover {
+    color: #1DA1F2;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.modal.fade-in {
+    opacity: 1;
+}
+
+.modal-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 320px; /* Reduced max-width for better mobile fit */
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+#registerForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#registerForm input,
+#registerForm select {
+    width: 100%;
+    padding: 8px 0;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+#registerForm .checkbox-group {
+    width: 100%;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+#registerForm button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+#closeModal {
+    background-color: #f44336;
+    margin-top: 20px;
+}
+
+#closeModal:hover {
+    background-color: #d32f2f;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+
+.welcome-popup {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.welcome-popup.show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+}
+
+.welcome-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 300px;
+    animation: popIn 0.5s cubic-bezier(0.26, 0.53, 0.74, 1.48);
+}
+
+@keyframes popIn {
+    0% { transform: scale(0.5); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.welcome-content h2 {
+    margin-bottom: 10px;
+}
+
+.fireworks {
+    width: 100%;
+    height: 100px;
+    margin: 20px 0;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="%237c5cfc"><animate attributeName="r" from="2" to="40" dur="1s" begin="0s" repeatCount="indefinite"/><animate attributeName="opacity" from="1" to="0" dur="1s" begin="0s" repeatCount="indefinite"/></circle></svg>');
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: fireworks 1s ease-out infinite;
+}
+
+@keyframes fireworks {
+    0% { transform: scale(0.5); opacity: 1; }
+    100% { transform: scale(2); opacity: 0; }
+}
+
+#continueButton {
+    margin-top: 20px;
+}
+
+@media (max-height: 600px) {
+    .modal-content {
+        margin: 5% auto;
+        max-height: 90vh;
+    }
+}

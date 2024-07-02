@@ -1,0 +1,68 @@
+/* css/welcome.css */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #7c5cfc;
+    color: white;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    max-width: 300px;
+}
+
+.logo {
+    margin-bottom: 40px;
+}
+
+.logo-box {
+    background-color: white;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+}
+
+.logo-box span {
+    font-size: 36px;
+    font-weight: bold;
+    color: #7c5cfc;
+}
+
+.message h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.message p {
+    font-size: 16px;
+    margin-bottom: 40px;
+}
+
+button {
+    background-color: white;
+    color: #7c5cfc;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+button:hover {
+    background-color: #f0f0f0;
+}
+
+button:active {
+    transform: scale(0.98);
+}

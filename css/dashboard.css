@@ -1,0 +1,148 @@
+/* css/dashboard.css */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8ff;
+}
+
+.container {
+    max-width: 375px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    min-height: 100vh;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+}
+
+#menuToggle {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #7c5cfc;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.user-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.header-icons {
+    display: flex;
+}
+
+.header-icons button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #7c5cfc;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+nav {
+    background-color: #7c5cfc;
+    position: fixed;
+    top: 0;
+    left: -200px;
+    width: 200px;
+    height: 100%;
+    transition: 0.3s;
+    z-index: 1000;
+}
+
+nav.open {
+    left: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 50px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px 20px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #6a4ae8;
+}
+
+main {
+    padding-top: 20px;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.news-item {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.news-item h3 {
+    font-size: 14px;
+    margin: 0 0 5px 0;
+}
+
+.news-item p {
+    font-size: 12px;
+    margin: 0;
+}
+
+#chargingHistory ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#chargingHistory li {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+#chargingHistory .date {
+    color: #666;
+}
+
+#chargingHistory .location {
+    font-weight: 500;
+}
+
+#chargingHistory .duration {
+    color: #7c5cfc;
+}
